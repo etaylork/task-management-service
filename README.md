@@ -24,7 +24,24 @@
 
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+A typescript backend server that uses the [Nest](https://github.com/nestjs/nest) framework. This backend service is a task management system that contains a set of web API endpoints that will enable a user to perform CRUD operations against a postgres RDBS.
+
+This project is part of the [nestjs-zero-to-hero](https://www.udemy.com/course/nestjs-zero-to-hero) course on udemy.
+
+## Requirements
+
+- Docker
+- Nodejs
+
+## Start Postgres Container
+
+Be sure docker is running on local system.
+
+```bash
+
+$ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postrgres postgres
+
+```
 
 ## Installation
 
@@ -32,7 +49,7 @@
 $ npm install
 ```
 
-## Running the app
+## Running the backend server
 
 ```bash
 # development
@@ -40,23 +57,9 @@ $ npm run start
 
 # watch mode
 $ npm run start:dev
-
-# production mode
-$ npm run start:prod
 ```
 
-## Test
-
-```bash
-# unit tests
-$ npm run test
-
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
+backend should now be running on `localhost:3000`
 
 ## Support
 
@@ -64,7 +67,6 @@ Nest is an MIT-licensed open source project. It can grow thanks to the sponsors 
 
 ## Stay in touch
 
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
 - Website - [https://nestjs.com](https://nestjs.com/)
 - Twitter - [@nestframework](https://twitter.com/nestframework)
 
