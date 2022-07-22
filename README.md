@@ -26,6 +26,8 @@
 
 A typescript backend server that uses the [Nest](https://github.com/nestjs/nest) framework. This backend service is a task management system that contains a set of web API endpoints that will enable a user to perform CRUD operations against a postgres RDBS.
 
+This project has authentication enabled using Nestjs Passport & JWT.
+
 This project is part of the [nestjs-zero-to-hero](https://www.udemy.com/course/nestjs-zero-to-hero) course on udemy.
 
 ## Requirements
