@@ -37,11 +37,13 @@ This project is part of the [nestjs-zero-to-hero](https://www.udemy.com/course/n
 
 ## Start Postgres Container
 
-Be sure docker is running on local system.
+Be sure docker is running on local system. Choose a `POSTGRES_PASSWORD` that you will like to use to access your database. The username will be `POSTGRES`. Once the docker contain is running verify that you can login to the postgres database using a database management GUI.
+
+Below is the command to run the postgres docker container and expose the postgres service on port 5432.
 
 ```bash
 
-$ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postrgres postgres
+$ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=${POSTGRES_PASSWORD} postgres
 
 ```
 
@@ -51,17 +53,28 @@ $ docker run --name postgres-nest -p 5432:5432 -e POSTGRES_PASSWORD=postrgres po
 $ npm install
 ```
 
-## Running the backend server
+## Start Local Dev Environment
+
+Before you can start the local dev environment the user must create a `.env.stage.dev` file in the root of the project. This file is not to be checked into any scm. Below are the following contents that need to go in the file.
 
 ```bash
-# development
-$ npm run start
+DB_HOST=localhost
+DB_PORT=5432
+DB_USERNAME=postgres
+DB_PASSWORD=${POSTGRESS_PASSWORD}
+DB_DATABASE=task-management
+JWT_SECRET=${JWT_SECRET}
+```
 
-# watch mode
+- `POSTGRES_PASSWORD`: The password used when creating the postgres container.
+- `JWT_SECRET`: Can be set to any secret string value.
+
+```bash
+# dev watch mode
 $ npm run start:dev
 ```
 
-backend should now be running on `localhost:3000`
+Once the above command has been executed then the dev environment should be running on [localhost:3000](http//localhost:3000)
 
 ## Support
 
