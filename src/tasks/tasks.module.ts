@@ -4,6 +4,7 @@ import { AuthModule } from 'src/auth/auth.module';
 import { Task } from './task.entity';
 import { TasksController } from './tasks.controller';
 import { TasksService } from './tasks.service';
+import { ConfigModule } from '@nestjs/config';
 
 /**
  * Tasks Module
@@ -11,7 +12,7 @@ import { TasksService } from './tasks.service';
  * everything related to Tasks will be contained within this module.
  */
 @Module({
-  imports: [TypeOrmModule.forFeature([Task]), AuthModule],
+  imports: [ConfigModule, TypeOrmModule.forFeature([Task]), AuthModule],
   controllers: [TasksController],
   providers: [TasksService],
 })

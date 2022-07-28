@@ -3,6 +3,8 @@ import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app.module';
 import { TransformInterceptor } from './transform.interceptor';
 
+console.log(process.env);
+
 async function bootstrap() {
   // How to add common logger into applciation
   const logger = new Logger();

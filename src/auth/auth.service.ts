@@ -32,8 +32,6 @@ export class AuthService {
     });
 
     try {
-      console.log('salt', salt);
-      console.log('password', hashedPassword);
       await this.userRepository.save(user);
     } catch (error) {
       if (error.code === '23505') {
