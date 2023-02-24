@@ -6,5 +6,5 @@ metadata:
     github.com/project-slug: etaylork/task-management-service
 spec:
   type: service
-  lifecycle: expiremental
+  lifecycle: experimental
   owner: qe
